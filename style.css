@@ -7,16 +7,36 @@ body {
 h1 {
   color: #DFE0E2;
   background: #0A0A0A;
+  margin: auto;
+  width: 50%;
+  margin-top: 10%;
 }
-label {
-  font-size: 1em;
-  cursor: pointer;
+#linkContainer {
+  margin: auto;
+  width: 50%;
 }
-.Labels:hover {
-  background-color: #DFE0E2;
-  /*left: 50px;*/
-
+a {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  /* border-radius: 20px; */
+  padding: 5px 5px;
 }
+a:hover {
+  background-color: #DFE0E23F;
+}
+/* label { */
+/*   font-size: 1em; */
+/*   margin: auto; */
+/*   width: 50%; */
+/*   cursor: pointer; */
+/*   color: #DFE0E2; */
+/*   transition: all 0.2s ease; */
+/* } */
+/* labels:hover { */
+/*   background-color: #DFE0E2; */
+/*   /*left: 50px;*/ */
+/**/
+/* } */
 #nowplayingLabel {
   color: #0077B6;
   position: absolute;

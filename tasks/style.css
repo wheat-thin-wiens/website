@@ -1,0 +1,80 @@
+body {
+  background-color: #19212B;
+}
+
+h1 {
+  font-size: 3em;
+  margin: auto;
+  margin-top: 10%;
+  width: 50%;
+  color: #FDFDFD;
+}
+
+#taskList {
+  margin: auto;
+  width: 50%;
+  padding: 10px 20px;
+}
+
+p {
+  color: #FDFDFD;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+p:hover {
+  background-color: #FDFDFD4C;
+}
+
+#activeTask {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-radius: 20px;
+  border-width: 1px;
+}
+
+#taskInput {
+  font-size: 1.5em;
+  background: transparent;
+  border: none;
+  border-color: transparent;
+  color: #FDFDFD;
+  outline: none;
+  padding: 10px 20px;
+}
+
+#addButton {
+  font-size: 1.5em;
+  background-color: #19212B;
+  border: none;
+  border-radius: 20px;
+  color: #FDFDFD;
+  cursor: pointer;
+  float: right;
+  padding: 10px 20px;
+  transition: all 0.2s ease;
+}
+
+#dateSelect {
+  font-size: 1.5em;
+  background: none;
+  color: #FDFDFD;
+  /* float: right; */
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+}
+
+::placeholder {
+  color: #FDFDFD;
+}
+
+#addButton:hover {
+  background-color: #FDFDFD4C;
+}
