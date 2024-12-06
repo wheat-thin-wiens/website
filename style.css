@@ -1,0 +1,51 @@
+body {
+  font-family: times;
+  font-size: 3em;
+  background: #0A0A0A;
+  padding: 0px 30px;
+}
+h1 {
+  color: #DFE0E2;
+  background: #0A0A0A;
+}
+label {
+  font-size: 1em;
+  cursor: pointer;
+}
+.Labels:hover {
+  background-color: #DFE0E2;
+  /*left: 50px;*/
+
+}
+#nowplayingLabel {
+  color: #0077B6;
+  position: absolute;
+  left: 30;
+  transition: all 0.25s ease;
+}
+#keyboardLabel {
+  color: #558564;
+  position: absolute;
+  left: 30;
+  transition: all 0.25s ease;
+}
+#edcLabel {
+  color: #EC0B43;
+  position: absolute;
+  left: 30;
+  transition: all 0.25s ease;
+}
+a {
+  color: #DFE0E2;
+}
+p {
+  color: #DFE0E2;
+}
+
+/*
+#0A0A0A
+#DFE0E2
+#0077B6
+#558564
+#EC0B43
+*/
