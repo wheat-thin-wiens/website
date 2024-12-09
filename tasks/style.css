@@ -14,20 +14,27 @@ h1 {
   margin: auto;
   width: 50%;
   padding: 10px 20px;
+  transition: all ease 0.2s;
 }
 
+/* #taskList:hover { */
+/*   background-color: #FDFDFD4C; */
+/* } */
+
 p {
+  margin: auto;
   color: #FDFDFD;
   font-size: 1.5em;
   padding: 10px 20px;
   border-radius: 20px;
-  transition: all 0.2s ease;
+  /* transition: all 0.2s ease; */
   cursor: pointer;
+  float: left;
 }
 
-p:hover {
-  background-color: #FDFDFD4C;
-}
+/* p:hover { */
+/*   background-color: #FDFDFD4C; */
+/* } */
 
 #activeTask {
   margin: auto;
@@ -77,4 +84,30 @@ p:hover {
 
 #addButton:hover {
   background-color: #FDFDFD4C;
+}
+
+.taskBtn {
+  color: #FFFFFF;
+  font-size: 2em;
+  margin: auto;
+  float: right;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.taskBtn:hover {
+  background-color: #FDFDFD4C;
+}
+
+.task{
+  display:initial;
+}
+
+img {
+  size: 0.1em;
 }

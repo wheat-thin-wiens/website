@@ -1,12 +1,22 @@
+html {
+  background-color: #0A0A0A;
+  /* background-image: url(assets/goldmedal.jpg); */
+  /* background-size: cover; */
+  /* filter: blur(8px) */
+}
 body {
   font-family: times;
   font-size: 3em;
-  background: #0A0A0A;
+  background: transparent;
   padding: 0px 30px;
+  /* background-image: url('assets/goldmedal.jpg'); */
+  /* background-size: cover; */
+  /* backdrop-filter: blur(8px); */
+  /* filter: grayscale(100%); */
 }
 h1 {
   color: #DFE0E2;
-  background: #0A0A0A;
+  background: transparent;
   margin: auto;
   width: 50%;
   margin-top: 10%;
@@ -20,48 +30,12 @@ a {
   transition: all 0.2s ease;
   /* border-radius: 20px; */
   padding: 5px 5px;
+  margin: 100px 0px;
+  color: #DFE0E2;
 }
 a:hover {
   background-color: #DFE0E23F;
 }
-/* label { */
-/*   font-size: 1em; */
-/*   margin: auto; */
-/*   width: 50%; */
-/*   cursor: pointer; */
-/*   color: #DFE0E2; */
-/*   transition: all 0.2s ease; */
-/* } */
-/* labels:hover { */
-/*   background-color: #DFE0E2; */
-/*   /*left: 50px;*/ */
-/**/
-/* } */
-#nowplayingLabel {
-  color: #0077B6;
-  position: absolute;
-  left: 30;
-  transition: all 0.25s ease;
-}
-#keyboardLabel {
-  color: #558564;
-  position: absolute;
-  left: 30;
-  transition: all 0.25s ease;
-}
-#edcLabel {
-  color: #EC0B43;
-  position: absolute;
-  left: 30;
-  transition: all 0.25s ease;
-}
-a {
-  color: #DFE0E2;
-}
-p {
-  color: #DFE0E2;
-}
-
 /*
 #0A0A0A
 #DFE0E2
