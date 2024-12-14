@@ -2,6 +2,11 @@ body {
   background-color: #19212B;
 }
 
+#homeLink {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 h1 {
   font-size: 3em;
   margin: auto;
@@ -17,10 +22,6 @@ h1 {
   transition: all ease 0.2s;
 }
 
-/* #taskList:hover { */
-/*   background-color: #FDFDFD4C; */
-/* } */
-
 p {
   margin: auto;
   color: #FDFDFD;
@@ -31,10 +32,6 @@ p {
   cursor: pointer;
   float: left;
 }
-
-/* p:hover { */
-/*   background-color: #FDFDFD4C; */
-/* } */
 
 #activeTask {
   margin: auto;
@@ -86,15 +83,23 @@ p {
   background-color: #FDFDFD4C;
 }
 
+li {
+  list-style: none;
+  color: #FDFDFD;
+  font-size: 2em;
+  padding: 10px 10px;
+  display: flex;
+  float: left;
+}
+
 .taskBtn {
   color: #FFFFFF;
   font-size: 2em;
-  margin: auto;
-  float: right;
+  gap: 10px;
   border: none;
   outline: none;
   background: none;
-  padding: 10px 10px;
+  padding: 5px 10px;
   border-radius: 20px;
   cursor: pointer;
   transition: all ease 0.2s;
@@ -104,8 +109,9 @@ p {
   background-color: #FDFDFD4C;
 }
 
-.task{
-  display:initial;
+.task {
+  display: flex;
+  justify-content: space-between;
 }
 
 img {

@@ -6,19 +6,28 @@ const dateSelect = document.getElementById("dateSelect");
 const taskList = document.getElementById("taskList");
 
 class Task {
-  constructor(name) {
+  constructor(name, date) {
     this.name = name;
-    this.para = document.createElement("p");
+    this.date = date;
+    this.para = document.createElement("li");
+    this.paraDate = document.createElement("p");
     this.completeBtn = document.createElement("button", {});
     this.deleteBtn = document.createElement("button", {});
+
+    this.task = document.createElement("div");
+    this.task.classList.add("task");
+    taskList.appendChild(this.task);
   }
 
   newTask() {
-    let task = document.createElement("div");
-    task.classList.add("task");
-    taskList.appendChild(task);
+    if (!this.date) {
+      this.para.innerHTML = this.name;
+    } else {
+      this.para.innerHTML = `${this.name} - ${this.date}`
+    }
 
-    this.para.innerHTML = this.name;
+    // this.para.innerHTML = this.name;
+    // this.paraDate.innerHTML = this.date;
     this.completeBtn.classList.add("taskBtn");
     this.deleteBtn.classList.add("taskBtn");
 
@@ -28,16 +37,21 @@ class Task {
     this.completeBtn.innerHTML = '<i class="fa fa-check"></i>'
     this.deleteBtn.innerHTML = '<i class="fa fa-bomb"></i>'
 
-    task.appendChild(this.para);
-    task.appendChild(this.completeBtn);
-    task.appendChild(this.deleteBtn);
-    // taskList.append(document.createElement("br"));
+    this.task.appendChild(this.para);
+    this.task.appendChild(this.paraDate);
+    this.task.appendChild(this.completeBtn);
+    this.task.appendChild(this.deleteBtn);
   }
 
   deleteTask() {
-    taskList.remove(this.para);
-    taskList.remove(this.completeBtn);
-    taskList.remove(this.deleteBtn);
+    this.task.remove(this.para);
+    this.task.remove(this.completeBtn);
+    this.task.remove(this.deleteBtn);
+  }
+
+  completeTask() {
+    this.para.innerHTML = this.para.innerHTML.strike();
+    // this.paraDate.innerHTML = this.date.strike();
   }
 
 }
@@ -57,6 +71,15 @@ function addTask() {
   // para.innerHTML = taskName;
   // taskList.appendChild(para);
 
-  let task = new Task(taskName);
+  let task = new Task(taskName, taskDate);
   task.newTask();
+
+  task.completeBtn.addEventListener('click', function() {
+    task.completeTask();
+  })
+
+  task.deleteBtn.addEventListener('click', function() {
+    task.deleteTask();
+  })
 }
+
