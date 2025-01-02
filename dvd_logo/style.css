@@ -1,0 +1,36 @@
+#homeLink {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  /* position: absolute; */
+}
+
+#menu {
+  margin: auto;
+  margin-top: 20%;
+  width: 50%;
+  text-align: center;
+  font-size: 2em;
+  /* position: absolute; */
+}
+
+#startButton {
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+#startButton:hover {
+  background-color: #0000003F;
+}
+
+#logo {
+  /* visibility: hidden; */
+  max-width: 10%;
+  /* left: 0px; */
+  /* top: 0px; */
+}

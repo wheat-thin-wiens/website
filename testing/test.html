@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing DVD Logo</title>
+    <style>
+        body { 
+            margin: 0; 
+            overflow: hidden; 
+            background-color: white; 
+        }
+        canvas { 
+            display: block; 
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+
+<script>
+    // Get canvas element and context
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    // Set canvas size to full screen
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // DVD logo image
+    const dvdLogo = new Image();
+    dvdLogo.src = "logo.png";
+
+    // DVD logo position and velocity
+    let logoWidth = 150;
+    let logoHeight = 80;
+    let x = Math.random() * (canvas.width - logoWidth);
+    let y = Math.random() * (canvas.height - logoHeight);
+    let dx = 2;
+    let dy = 2;
+
+    // Function to update the position of the logo
+    function update() {
+        // Clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw the DVD logo at the current position
+        ctx.drawImage(dvdLogo, x, y, logoWidth, logoHeight);
+
+        // Update the position for the next frame
+        x += dx;
+        y += dy;
+
+        // Bounce the logo off the edges
+        if (x + logoWidth > canvas.width || x < 0) {
+            dx = -dx;
+        }
+        if (y + logoHeight > canvas.height || y < 0) {
+            dy = -dy;
+        }
+
+        // Request the next animation frame
+        requestAnimationFrame(update);
+    }
+
+    // Wait for the image to load and start animation
+    dvdLogo.onload = function() {
+        update();
+    };
+</script>
+
+</body>
+</html>
+
